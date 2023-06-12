@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="option"></h1>
+      <button onclick=" clock()" id="button2">clock</button>
+      <p id="clock"></p>
+      <img
+        src="./53625-good-morning.gif"
+        id="morning"
+        style="display: none; margin-left: 45%"
+      />
+      <img
+        src="./91070-hot-smiling-coffee-good-morning.gif"
+        id="afternoon"
+        style="display: none; margin-left: 45%"
+      />
+      <img
+        src="./108282-sunrise.gif"
+        id="evening"
+        style="display: none; margin-left: 45%"
+      />
+      <img
+        src="./139998-day-and-night-landscape.gif"
+        id="night"
+        style="display: none; margin-left: 45%"
+      />
+    </div>
+
+    <script>
+      let clockscreen = document.getElementById("clock");
+      let option = document.getElementById("option");
+      let button2 = document.getElementById("button2");
+
+      function clock() {
+        time = new Date().getHours();
+        clockscreen.innerHTML = new Date().getHours() + " :  00 Hours";
+        button2.style.display = "none";
+        option.style = "text-align: center;color: brown";
+        clockscreen.style = "text-align: center;color: brown";
+        console.log(time);
+        image();
+
+        response = () => {
+          return {
+            GoodNight: "good night",
+            GoodAfternoon: "good afternoon",
+            GoodEvening: "good evening",
+            GoodMorning: "good morning",
+          };
+        };
+
+        console.log(time < 17 && time > 12);
+        console.log(time < 20 && time > 17);
+        console.log(time < 24 && time > 20);
+
+        function image() {
+          if (time < 12) {
+            let img = document.getElementById("morning");
+            img.style.display = "block";
+          }
+
+          if (time < 17 && time > 12) {
+            let img = document.getElementById("afternoon");
+            img.style.display = "block";
+          }
+          if (time < 20 && time > 17) {
+            let img = document.getElementById("evening");
+            img.style.display = "block";
+          }
+          if (time < 24 && time > 20) {
+            let img = document.getElementById("night");
+            img.style.display = "block";
+          }
+        }
+
+        switch (true) {
+          case time < 12:
+            return {
+              alert: alert("take a cup of coffee for good health"),
+              data: (option.innerHTML = response().GoodMorning),
+            };
+
+          case time < 17:
+            return {
+              alert: alert("Eat healthy and stay healthy"),
+              data: (option.innerHTML = response().GoodAfternoon),
+            };
+
+          case time < 20:
+            return {
+              alert: alert("Eat healthy and stay healthy"),
+              data: (option.innerHTML = response().GoodEvening),
+            };
+
+          case time < 24:
+            return {
+              alert: alert("take a good sleep and stay healthy"),
+              data: (option.innerHTML = response().GoodNight),
+            };
+        }
+      }
+    </script>
+  </body>
+</html>
