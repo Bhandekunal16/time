@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Robotec</title>
   </head>
-  <body>
+  <body onload=" clock()">
+    <header><span style="color: orange">R</span>obotec</header>
     <div>
       <h1 id="option"></h1>
-      <button onclick=" clock()" id="button2">clock</button>
       <p id="clock"></p>
       <img
         src="./53625-good-morning.gif"
@@ -40,7 +40,6 @@
       function clock() {
         time = new Date().getHours();
         clockscreen.innerHTML = new Date().getHours() + " :  00 Hours";
-        button2.style.display = "none";
         option.style = "text-align: center;color: brown";
         clockscreen.style = "text-align: center;color: brown";
         console.log(time);
