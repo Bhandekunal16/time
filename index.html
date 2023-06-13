@@ -196,7 +196,7 @@
           };
         };
 
-        console.log(time < 17 && time > 12);
+        console.log(time >= 12 && time < 17);
         console.log(time < 20 && time > 17);
         console.log(time < 24 && time > 20);
 
@@ -206,15 +206,15 @@
             img.style.display = "block";
           }
 
-          if (time < 17 && time > 12) {
+          if (time >= 12 && time < 17) {
             let img = document.getElementById("afternoon");
             img.style.display = "block";
           }
-          if (time < 20 && time > 17) {
+          if (time < 20 && time >= 17) {
             let img = document.getElementById("evening");
             img.style.display = "block";
           }
-          if (time < 24 && time > 20) {
+          if (time < 24 && time >= 20) {
             let img = document.getElementById("night");
             img.style.display = "block";
           }
@@ -226,17 +226,17 @@
             passage.style.display = "block";
           }
 
-          if (time < 17 && time > 12) {
+          if (time < 17 && time >= 12) {
             let passage = document.getElementById("afternoon_p");
-            img.style.display = "block";
+            passage.style.display = "block";
           }
-          if (time < 20 && time > 17) {
+          if (time >= 12 && time < 17) {
             let passage = document.getElementById("evening_p");
-            img.style.display = "block";
+            passage.style.display = "block";
           }
-          if (time < 24 && time > 20) {
+          if (time < 24 && time >= 20) {
             let passage = document.getElementById("night_p");
-            img.style.display = "block";
+            passage.style.display = "block";
           }
         }
 
