@@ -6,7 +6,9 @@
     <title>Robotec</title>
   </head>
   <body onload=" clock()">
-    <header style="background-color: rgb(207, 200, 200);"><h1><span style="color: orange">R</span>obotec</header></h1>
+    <div style="background-color: rgb(207, 200, 200)">
+      <h1 onclick="about()"><span style="color: orange">R</span>obotec</h1>
+    </div>
     <div>
       <h1 id="option"></h1>
       <p id="clock"></p>
@@ -39,7 +41,7 @@
           display: none;
           text-align: center;
           height: 100%;
-         width: 100%;
+          width: 100%;
           background-color: rgb(207, 200, 200);
           border-radius: 0px 0px 20px 20px;
         "
@@ -137,7 +139,7 @@
           display: none;
           text-align: center;
           height: 100%;
-         width: 100%;
+          width: 100%;
           background-color: rgb(207, 200, 200);
           border-radius: 0px 0px 20px 20px;
         "
@@ -166,6 +168,8 @@
         can help calm your mind, reduce stress, and improve sleep quality. Focus
         on your breath, engage in body scans, or listen to guided meditations.
       </p>
+
+      <p id="content"></p>
     </div>
 
     <script>
@@ -257,6 +261,10 @@
               data: (option.innerHTML = response().GoodNight),
             };
         }
+      }
+      function about() {
+        let content = document.getElementById("content");
+        content.innerHTML = "<h1>it's is an time showing website</h1>";
       }
     </script>
   </body>
