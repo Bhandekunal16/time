@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robotec</title>
   </head>
-  <body onload=" clock()">
-    <div style="background-color: rgb(207, 200, 200)">
+  <body onload=" clock()" style="background-color: whitesmoke">
+    <div style="background-color: white">
       <h1 onclick="about()"><span style="color: orange">R</span>obotec</h1>
     </div>
     <div>
@@ -42,7 +42,7 @@
           text-align: center;
           height: 100%;
           width: 100%;
-          background-color: rgb(207, 200, 200);
+          background-color: white;
           border-radius: 0px 0px 20px 20px;
         "
       >
@@ -75,7 +75,7 @@
           text-align: center;
           height: 100%;
           width: 100%;
-          background-color: rgb(207, 200, 200);
+          background-color: white;
           border-radius: 0px 0px 20px 20px;
         "
       >
@@ -107,7 +107,7 @@
           text-align: center;
           height: 100%;
           width: 100%;
-          background-color: rgb(207, 200, 200);
+          background-color: white;
           border-radius: 0px 0px 20px 20px;
         "
       >
@@ -140,7 +140,7 @@
           text-align: center;
           height: 100%;
           width: 100%;
-          background-color: rgb(207, 200, 200);
+          background-color: white;
           border-radius: 0px 0px 20px 20px;
         "
       >
@@ -179,7 +179,9 @@
 
       function clock() {
         time = new Date().getHours();
-        clockscreen.innerHTML = new Date().getHours() + " :  00 Hours";
+        min= new Date().getMinutes();
+        sec= new Date().getSeconds();
+        clockscreen.innerHTML = new Date().getHours() + ":" + min + ":" + sec;
         option.style =
           "text-align: center; color: orange; font-family: 'Georgia', serif;";
         clockscreen.style = "text-align: center;color: orange";
@@ -264,7 +266,8 @@
       }
       function about() {
         let content = document.getElementById("content");
-        content.innerHTML = "<h1>it's is an time showing website</h1>";
+        content.innerHTML = 
+        "<h1>it's is an time showing website !</h1><p>Rasika Bhande</p>";
       }
     </script>
   </body>
