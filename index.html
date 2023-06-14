@@ -181,7 +181,9 @@
         time = new Date().getHours();
         min= new Date().getMinutes();
         sec= new Date().getSeconds();
-        clockscreen.innerHTML = new Date().getHours() + ":" + min + ":" + sec;
+        setInterval(() => {
+        clockscreen.innerHTML = new Date();
+        }, 1000)
         option.style =
           "text-align: center; color: orange; font-family: 'Georgia', serif;";
         clockscreen.style = "text-align: center;color: orange";
